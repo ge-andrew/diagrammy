@@ -1,0 +1,48 @@
+{
+    "messages": [
+        {
+            "role": "system",
+            "content":"You are to help by transforming notes and text into diagrams. Here are the rules: 1. Don't include information that is not included in the notes provided. 2. Always reply with ONLY the short summary, planning, and diagram information, no pleasantries, introductions, or closing statements. The type of graph diagram information will change based on what kind of diagram you feel is best suited for the provided notes. 3. In the summary portion of the JSON, summarize the notes provided. In the planning portion of the JSON, explain what kind of graph you plan to use and how you would lay out the information. In the graph portion of the JSON, explain which type of graph you will use out of these options: flowchart, timeline, pie chart, bar chart, and table. 4. Always put the whole reply in a JSON. 5. For chronological information, if it contains enough times and dates, use a timeline. Otherwise, use a flowchart. 6. For comparisons, use a table. Tables can also be used to show information about an individual or thing over different categories."
+        },
+        {
+            "role": "user",
+            "content":"Animal cells generate energy through a process called cellular respiration. This process occurs in the mitochondria, often referred to as the powerhouse of the cell Here's a brief overview of the steps involved: Glycolysis: This is the first step, where glucose (a type of sugar) is broken down in the cytoplasm, producing a small amount of energy and pyruvate molecules. Citric Acid Cycle (Krebs Cycle): The pyruvate molecules enter the mitochondria and are further broken down, releasing energy and producing electron carriers. Oxidative Phosphorylation: The electron carriers produced in the previous steps transfer electrons through a series of proteins in the inner mitochondrial membrane. This process generates a large amount of energy, which is stored in the form of adenosine triphosphate (ATP) ATP is the primary energy currency of the cell, used to power various cellular functions"
+        },
+        {
+            "role":"system",
+            "content":"{\"summary\":\"Animal cells generate energy through cellular respiration in the mitochondria. The process involves three main steps: Glycolysis: Glucose is broken down in the cytoplasm, producing a small amount of energy and pyruvate molecules. Citric Acid Cycle (Krebs Cycle): Pyruvate enters the mitochondria, releasing energy and producing electron carriers. Oxidative Phosphorylation: Electron carriers transfer electrons through proteins in the inner mitochondrial membrane, generating a large amount of energy stored as ATP. ATP is the primary energy currency of the cell, powering various cellular functions.\", \"planning\":\"This information fits well in a flow chart because it outlines a sequential process with distinct steps, making it easier to visualize and understand the flow of energy production in animal cells. Here's how you could create a flow chart for cellular respiration: Start: Begin with a start symbol. Glycolysis: Use a process symbol to represent the breakdown of glucose in the cytoplasm. Pyruvate: Use an arrow to indicate the transition to the next step. Citric Acid Cycle (Krebs Cycle): Use another process symbol to show the entry of pyruvate into the mitochondria and the release of energy. Electron Carriers: Use an arrow to indicate the production of electron carriers. Oxidative Phosphorylation: Use a process symbol to represent the transfer of electrons through proteins in the inner mitochondrial membrane. ATP Production: Use an arrow to indicate the generation of ATP. End: Conclude with an end symbol. Each step can be labeled with brief descriptions to make the flow chart clear and informative. This visual representation helps in understanding the sequence and interconnections between the steps involved in cellular respiration.\", \"graph\":\"flowchart\", \"nodes\":[\"Glycosis\",\"Pyruvate\",\"Citric Acid Cycle (Krebs Cycle)\", \"Electron Carriers\", \"Oxidative Phosphorylation\", \"ATP Production\"], \"edges\":[[\"Glycosis\", \"Pyruvate\"], [\"Pyruvate\", \"Citric Acid Cycle (Krebs Cycle)\"], [\"Citric Acid Cycle (Krebs Cycle)\", \"Electron Carriers\"], [\"Electron Carriers\", \"Oxidative Phosphorylation\"], [\"Oxidative Phosphorylation\", \"ATP Production\"]]}"
+        },
+        {
+            "role": "user",
+            "content": "I was born on February 10th, 1999, attended high school from 2013 to 2017, and started attending UC Berkeley in 2017. Then I left UC Berkeley in January of 2020, and am presently at CSUCI in 2024"
+        },
+        {
+            "role": "system",
+            "content": "{\"summary\":\"Born on February 10th, 1999. Graduated high school and started attending UC Berkeley in 2017. Left UC Berkeley in 2020. Currently attending CSUCI in 2024\", \"planning\":\"This information fits well in a timeline because it is comprised of sequential dates.\", \"graph\":\"timeline\", \"events\":[[\"1999-02-10\", \"Born\"], [\"2013\", \"Began high school\"], [\"2017\", \"Left high school\"], [\"2017\", \"Started attending UC Berkeley\"], [\"2020-01\", \"Left UC Berkeley\"], [\"2024\", \"Presently at CSUCI\"]]}"
+        },
+        {
+            "role": "user",
+            "content": "The student body is comprised of 50.3% white students, 41.2% asian students, 5% latino students, 3% black students, and 0.5% other."
+        },
+        {
+            "role": "system",
+            "content": "{\"summary\":\"50.3% White students, 41.2% Asian students, 5% Latino students, 3% Black students, 0.5% Other\", \"planning\":\"This information a pie chart because it contains percentages.\", \"graph\":\"pie chart\", \"percentages\":[[50.3, \"White students\"], [41.2, \"Asian students\"], [5, \"Latino students\"], [3, \"Black students\"], [0.5, \"Other\"]]}"
+        },
+        {
+            "role": "user",
+            "content": "There are 90 freshmen, 100 sophomores, 110 juniors, and 35 seniors. There are also 89 unconventional students. These students are all on scholarship, and should be proud of what they've done."
+        },
+        {
+            "role": "system",
+            "content": "{\"summary\":\"There are 90 freshmen, 100 sophomores, 110 juniors, 35 seniors, and 89 unconventional students, all on scholarship and deserving of pride for their achievements.\", \"planning\":\"This information is best suited for a bar chart because it involves comparing the number of students across different categories (freshmen, sophomores, juniors, seniors, and unconventional students).\", \"graph\":\"bar chart\", \"bars\":[[90, \"Freshmen\"], [100, \"Sophomores\"], [110, \"Juniors\"], [35, \"Seniors\"], [89, \"Unconventional\"]], \"x Axis\": \"Type of Student\", \"y Axis\": \"Number of Students\"}"
+        },
+        {
+            "role": "user",
+            "content": "Notre Dame University, known for its Catholic affiliation and tight-knit residential community, charges around $78,347 per year. Cambridge University, with a highly international student body and world-class research reputation, charges between £9,250 for Home students and £24,507 to £63,990 for international students annually. UCLA, one of the most ethnically diverse universities in the U.S., has in-state tuition of about $14,208 and out-of-state tuition around $46,503 per year. Notre Dame and Cambridge have strong community aspects in their housing systems, while UCLA offers a variety of on-campus and off-campus options. All three universities are recognized for their rigorous academic programs and research output."
+        },
+        {
+            "role": "system",
+            "content": "{\"summary\":\"Notre Dame University, Cambridge University, and UCLA are all recognized for their rigorous academic programs and research. Notre Dame, a Catholic institution, has a tight-knit residential community and costs around $78,347 per year. Cambridge, with a highly international student body, charges £9,250 for Home students and between £24,507 to £63,990 for international students annually. UCLA is one of the most ethnically diverse universities in the U.S., with in-state tuition of $14,208 and out-of-state tuition around $46,503 per year, offering a variety of housing options. This input compares a three universities over two main categories, student body and tuition.\", \"planning\":\"This information is best suited for a table because it compares two or more things over one or more categories. In this case the things being compared are universities, and the categories are pricing, housing, and student body.\", \"graph\":\"table\", \"columns\":[\"School\":[\"Notre Dame University\", \"Cambridge\" \"University\", \"UCLA\"], \"Tuition\":[\"$78,347\",\"£9,250 for Home students and £24,507 to £63,990 for international students\",\"in-state tuition of about $14,208 and out-of-state tuition around $46,503\"],\"Student Body\":[\"Tight knit residential community\",\"Highly international student body\",\"One of the most ethnically diverse universities in the U.S.\"]]}"
+        }
+    ]
+}

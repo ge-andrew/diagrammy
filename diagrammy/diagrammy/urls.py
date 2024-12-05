@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core.views import home, home2, landing, about
+from core.views import landing, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
