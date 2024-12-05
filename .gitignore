@@ -46,3 +46,10 @@ node_modules/
 # Other files
 *.swp
 
+# Static files are auto generated in staticfiles
+staticfiles/
+
+# Keys and related items
+*.pem
+*.crt
+*.key
