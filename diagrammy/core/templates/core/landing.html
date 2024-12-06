@@ -1,42 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    <title>Diagrammy</title>
-</head>
-<body>
-    <h1>Welcome to Diagrammy!</h1>
-    <p>Transform your text into diagrams.</p>
-    <p>Available diagram types: flowchart, timeline, pie chart, bar chart, table.</p>
-
-    <form method="post" action="{% url 'core:process_text' %}">
-	 {% csrf_token %}
-	<label for="user_input">Enter Text:</label>
-	<textarea rows="8" cols="50" id="user_input" name="user_input" style="height:200px"></textarea>
-	<button type="submit">Submit</button>
-    </form>
-
-    {% if image_url %}
-    <img src="{{ image_url }}" alt="Generated Image">
-    {% endif %}
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-        integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS"
-        crossorigin="anonymous"></script>
-
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
-</body>
-</html>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
