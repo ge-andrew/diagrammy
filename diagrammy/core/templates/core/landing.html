@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <title>Diagrammy</title>
 </head>
 <body>
@@ -32,3 +33,62 @@
 </body>
 </html>
 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <title>Diagrammy</title>
+</head>
+<body>
+    <h1>Welcome to Diagrammy!</h1>
+
+    <p id="metadata">CSUCI Computer Science Capstone | Andrew Ge | Advisor Dr. Brian Thoms | Fall 2024</p>
+
+    <p>Transform your text into diagrams.</p>
+    <p>Available diagram types: flowchart, timeline, pie chart, bar chart, table.</p>
+
+    <!--Remember to separate process-text page's items with normal page's-->
+    <div class="container">
+        <div class="row align-items-center my-custom-div">
+            <div class="col-md-6 col-12 text-center text-md-start" id="text-enter-area">
+                <form method="post" action="{% url 'core:process_text' %}" class="flex-container">
+                    action="{% url 'core:process_text' %}"
+                    <label for="user_input">Enter Text:</label>
+                    <textarea id="user_input" name="user_input"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6 col-12 text-center text-md-start">
+                <div class="flex-container">
+                    <p>Your generated image will appear here.</p>
+                    <p>Ctrl-V away!</p>
+                    {% if image_url %}
+                    <img src="{{ image_url }}" alt="Generated Image" width="80%">
+                    <a href="{{ image_url }}" download="generated_img">Click to download image</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://geandrew.cikeys.com/">CIKeys</a>
+        <a href="https://github.com/ge-andrew/diagrammy">Github</a>
+        <a href="https://www.linkedin.com/in/geandrewge/">LinkedIn</a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha384-UG8ao2jwOWB7/oDdObZc6ItJmwUkR/PfMyt9Qs5AwX7PsnYn1CRKCTWyncPTWvaS"
+    crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
