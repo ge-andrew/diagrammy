@@ -1,0 +1,106 @@
+@font-face { 
+    font-family: 'Montserrat'; 
+    src: url('../fonts/Montserrat/static/Montserrat-Regular.ttf') format('truetype'); 
+    font-weight: normal; font-style: normal; 
+} 
+
+@font-face { 
+    font-family: 'Oswald'; 
+    src: url('../fonts/Oswald/static/Oswald-Bold.ttf') format('truetype'); 
+    font-weight: normal; font-style: normal; 
+    padding: 500px;
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: #FCF7F8;
+}
+
+footer { 
+    background-color: #A31621; /* Dark background */ 
+    color: #fff; 
+    text-align: center; 
+    padding: 20px 0; 
+    bottom: 0; 
+    width: 100%
+}
+
+h1, h2, h3, h4, h5, p, a {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Oswald';
+}
+
+h1 {
+    background-color: #A31621;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+a { 
+    text-decoration: underline; 
+    color:black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    object-fit: contain;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+}
+
+div {
+    height: 100%;
+    width: 100%;
+}
+
+footer a { 
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.goal-icon {
+    width: 20%;
+}
+
+.container {
+    margin: 0px;
+    width: 100%;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+}
+
+#metadata {
+    text-align: center;
+}
+
+#capstone-link {
+    text-align: center;
+}
+
+#text-enter-area {
+    height:100%
+}
